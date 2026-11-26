@@ -1,0 +1,208 @@
+/* Pengaturan Dasar Ala Jurnal Pribadi */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f1ea; /* Warna latar kertas vintage */
+    background-image: radial-gradient(#d6ccc2 1px, transparent 1px);
+    background-size: 24px 24px;
+    color: #2c2521;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Jumbotron / Header seperti Judul Buku Harian */
+.JUMBOTRON {
+    background: #e3d5ca;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 3px dashed #b08968;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.JUMBOTRON h1 {
+    font-size: 2.5rem;
+    color: #4a3b32;
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
+    margin: 0 0 10px 0;
+    text-shadow: 1px 1px 0px #fff;
+}
+
+.JUMBOTRON p {
+    color: #6b5b52;
+    font-size: 1.05rem;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* Navbar seperti Kumpulan Tab Catatan */
+.navbar {
+    background: #d5bdaf;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #b08968;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a {
+    display: block;
+    color: #4a3b32;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    transition: all 0.2s ease;
+}
+
+.navbar ul li a:hover {
+    background: #b08968;
+    color: #fff;
+    border-radius: 4px;
+}
+
+/* Layout Utama */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    overflow: auto;
+}
+
+#content {
+    float: left;
+    width: 70%;
+}
+
+aside {
+    float: right;
+    width: 27%;
+}
+
+/* Kartu Konten seperti Potongan Kertas / Polaroid */
+.card {
+    margin-bottom: 40px;
+}
+
+.planet-box {
+    background: #ffffff;
+    border: 1px solid #d6ccc2;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(44, 37, 33, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.planet-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(44, 37, 33, 0.1);
+}
+
+.planet-box img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    border: 4px solid #f4f1ea;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.planet-text h2 {
+    color: #4a3b32;
+    font-size: 1.5rem;
+    margin: 0 0 12px 0;
+    border-bottom: 2px dotted #d6ccc2;
+    padding-bottom: 8px;
+}
+
+.planet-text p {
+    color: #5c4d44;
+    line-height: 1.8;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Sidebar Profil seperti Kartu Nama / Catatan Saku */
+aside .profile {
+    background: #fff;
+    border: 1px solid #d6ccc2;
+    border-radius: 12px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(44, 37, 33, 0.06);
+}
+
+.profile h2 {
+    color: #4a3b32;
+    font-size: 1.3rem;
+    margin: 0 0 8px 0;
+}
+
+.profile p {
+    color: #7f6f65;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0 0 15px 0;
+    font-style: italic;
+}
+
+.profile figure {
+    margin: 0;
+    padding: 8px;
+    background: #f4f1ea;
+    border-radius: 8px;
+    border: 1px solid #d6ccc2;
+}
+
+.profile-img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+/* Footer Sederhana */
+footer {
+    background: #e3d5ca;
+    color: #6b5b52;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9rem;
+    clear: both;
+    border-top: 2px dashed #b08968;
+    margin-top: 60px;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+/* Responsif untuk HP */
+@media screen and (max-width: 768px) {
+    #content, aside {
+        float: none;
+        width: 100%;
+    }
+    
+    .JUMBOTRON h1 {
+        font-size: 2rem;
+    }
+}
